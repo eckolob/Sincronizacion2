@@ -20,16 +20,18 @@ public class ProductorConsumidor
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) 
+    public static void main(String[] args) throws InterruptedException 
     {
         v= new Interfaz();
         buffer = new Buffer();
         productor = new Thread(new Productor(buffer,v));
+       
         consumidor = new Thread(new Consumidor(buffer,v));
            
          
-        productor.start();
-         consumidor.start();
+         productor.start();
+          consumidor.start();
+          
         
     }    
 }

@@ -38,12 +38,12 @@ public class Productor implements Runnable
      */
     public void run() 
     {
-        while(Boolean.TRUE)
+        while(true)
         {
-            int poner = aleatorio.nextInt(300);
-            buffer.put(poner);
+            int elemento = aleatorio.nextInt(99)+1;
+            buffer.Producir(elemento);
             System.out.println();
-            v.areabuffer.append("El productor " + " pone: " + poner+"\n");
+            v.areabuffer.append("El productor " + " pone: " + elemento+"\n");
             try
             {
                 Thread.sleep(TIEMPOESPERA);

@@ -33,10 +33,10 @@ public class Consumidor implements Runnable
     public void run() 
     {
         
-        while(Boolean.TRUE)
+        while(true)
         {
           
-            v.areabuffer.append("El consumidor " + " consume: " + buffer.get()+"\n");
+            v.areabuffer.append("El consumidor " + " consume: " + buffer.Consumir()+"\n");
             
         }
     }
